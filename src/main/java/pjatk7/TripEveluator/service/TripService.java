@@ -1,11 +1,13 @@
 package pjatk7.TripEveluator.service;
 
+import org.springframework.stereotype.Service;
 import pjatk7.TripEveluator.database.TripRepository;
 import pjatk7.TripEveluator.models.Review;
 import pjatk7.TripEveluator.models.Trip;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TripService {
     private final TripRepository tripRepository;
 
@@ -13,9 +15,8 @@ public class TripService {
         this.tripRepository = tripRepository;
     }
 
-    public Trip saveTrip(Trip trip){
-        Trip saveTrip = tripRepository.save(trip);
-        return saveTrip;
+    public void saveTrip(Trip trip){
+        tripRepository.save(trip);
     }
 
     public void addReview(Review review, Trip trip){
