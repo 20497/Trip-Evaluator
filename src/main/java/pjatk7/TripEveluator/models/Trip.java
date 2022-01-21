@@ -18,6 +18,12 @@ public class Trip {
     public Trip() {
     }
 
+    public Trip(Integer id, String title, String destination) {
+        this.id = id;
+        this.title = title;
+        this.destination = destination;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }

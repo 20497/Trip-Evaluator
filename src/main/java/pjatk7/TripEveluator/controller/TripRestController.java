@@ -23,7 +23,7 @@ public class TripRestController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/postReview")
+    @PostMapping("/postReview")
     public ResponseEntity<Void> addReview(Review review, Trip trip){
         tripService.addReview(review, trip);
         return ResponseEntity.ok().build();

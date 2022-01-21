@@ -16,6 +16,11 @@ public class Review {
     public Review() {
     }
 
+    public Review(Integer id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
